@@ -37,7 +37,7 @@ import static org.springframework.http.MediaType.*;
 @Controller
 @RequestMapping(value = "/measurements", produces = {APPLICATION_JSON_VALUE})
 @Api(value = "/measurements", description = "the measurements API")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.SpringMVCServerCodegen", date = "2015-11-03T22:25:20.334Z")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.SpringMVCServerCodegen", date = "2015-11-05T03:17:12.243Z")
 public class MeasurementsApi {
   
 
@@ -145,7 +145,7 @@ public class MeasurementsApi {
 
   
 
-  @ApiOperation(value = "Get Measurements CSV", notes = "Get Measurements CSV", response = File.class)
+  @ApiOperation(value = "Get Measurements CSV", notes = "Download a CSV containing all user measurements", response = File.class)
   @ApiResponses(value = { 
     @ApiResponse(code = 200, message = "successful operation") })
   @RequestMapping(value = "/csv", 
@@ -160,7 +160,7 @@ public class MeasurementsApi {
 
   
 
-  @ApiOperation(value = "Post Request for Measurements CSV", notes = "Post Request for Measurements CSV", response = Integer.class)
+  @ApiOperation(value = "Post Request for Measurements CSV", notes = "Use this endpoint to schedule a CSV export containing all user measurements to be emailed to the user within 24 hours.", response = Integer.class)
   @ApiResponses(value = { 
     @ApiResponse(code = 200, message = "successful operation") })
   @RequestMapping(value = "/request_csv", 
